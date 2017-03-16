@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { Button, Card, CardText, CardTitle, CardActions, CardMenu, IconButton , Grid, Cell } from 'react-mdl';
+import axios from 'axios'
 
 class Content extends Component {
 	
@@ -27,15 +28,25 @@ class Content extends Component {
 			<div className="App-content">
 				<h3>{this.props.title}</h3>
 				<InputSearch  loading="true" onChange={this.refreshList} />
-				<ul>
+				
+
+				<Grid className="demo-grid-1">
 					{this.state.posts.map(post =>
-					<li key={post.id}>
-					   <span className="title">Title Book: {post.volumeInfo.title}</span>
-					   <span className="subtitle">Author: {post.volumeInfo.authors}</span>
-					</li>
-				  )}
-				</ul>
-				 
+						<Cell col={4}>	 
+							<Card shadow={0} style={{width: '320px', height: '320px', margin: '0', display:'flex'}}>
+								<CardTitle expand style={{color: '#fff', backgroundColor: '#46B6AC', textTransform: 'lowercase'}}>				
+									{post.volumeInfo.title}
+								</CardTitle>
+								<CardText>
+									{post.volumeInfo.title}
+								</CardText>
+								<CardActions border>
+									<Button colored>Ver mais</Button>
+								</CardActions>
+							</Card>
+						</Cell>
+					)}
+				</Grid>			 
 			</div>
 		)
 	}
@@ -60,7 +71,7 @@ class InputSearch extends Component {
 	
 	render() {
 		return(
-			<input onChange={this.filterText} placeholder="escreva a palavra chave para o seu livro" />
+			<input onChange={this.filterText} placeholder="Escreva a palavra chave para o seu livro" />
 		)
 	}
 }

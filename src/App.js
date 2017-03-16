@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
 		<Header title={"Bem vindo ao book-search"}/>
-		<Content title={"Vamos pesquisar"}/>
+		<Content title={"Vamos pesquisar um livro"}/>
       </div>
     );
   }
@@ -17,5 +17,5 @@ export default App;
 
 export const Header = (props) =>
 	<div className="App-header">
-	  <h2>{props.title}</h2>
+	  <h1>{props.title}</h1>
 	</div>;

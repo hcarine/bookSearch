@@ -1,5 +1,35 @@
+.colors{
+	color:#594F4F;
+	color:#547980;
+}
+body {
+	color: #547980;
+}
 .App {
-  text-align: center;
+	text-align: center;
+	font-size: 16px;
+	line-height: 30px;
+}
+.App h3 {
+	font-weight: 500;
+}
+.App-header {
+	background-color: #E5FCC2;
+    padding: 20px;
+    border-bottom: 1px solid #594F4F;
+}
+.App-header h1 {
+	font-size: 30px;
+    font-weight: 500;
+    padding-top: 0;
+}
+.App-content input {
+	min-width: 50%;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #9DE0AD;
+	padding: 10px;
+	font-size: 14px;
 }
 ul{
     list-style-type: none;
