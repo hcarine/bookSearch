@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Card, CardText, CardTitle, CardActions, CardMenu, IconButton , Grid, Cell } from 'react-mdl';
+import { Card, CardText, CardTitle, CardActions, Grid, Cell } from 'react-mdl';
+import {Link} from 'react-router-dom'
 import axios from 'axios'
 
 class Content extends Component {
@@ -23,6 +24,8 @@ class Content extends Component {
 		  });
 		
 	}
+
+	
 	render() {
 		return(
 			<div className="App-content">
@@ -32,7 +35,7 @@ class Content extends Component {
 
 				<Grid className="demo-grid-1">
 					{this.state.posts.map(post =>
-						<Cell col={4}>	 
+						<Cell col={4} key={post.id}>	 
 							<Card shadow={0} style={{width: '320px', height: '320px', margin: '0', display:'flex'}}>
 								<CardTitle expand style={{color: '#fff', backgroundColor: '#46B6AC', textTransform: 'lowercase'}}>				
 									{post.volumeInfo.title}
@@ -41,7 +44,7 @@ class Content extends Component {
 									{post.volumeInfo.title}
 								</CardText>
 								<CardActions border>
-									<Button colored>Ver mais</Button>
+									<Link to="/book">Ver mais</Link>
 								</CardActions>
 							</Card>
 						</Cell>
