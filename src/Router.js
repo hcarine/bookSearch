@@ -3,16 +3,16 @@ import App from './App'
 import Book from './Book'
 
 import {
-  BrowserRouter,
+  HashRouter,
   Route
 } from 'react-router-dom'
 
 const Router = () => (
-  <BrowserRouter>
+  <HashRouter>
 	<div>
 		<Route exact path="/" component={App}/>
     	<Route path="/book/:id" component={Book}/>
 	</div>
-  </BrowserRouter>
+  </HashRouter>
 )
 export default Router

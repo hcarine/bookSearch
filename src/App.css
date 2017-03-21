@@ -23,7 +23,8 @@ body {
     font-weight: 500;
     padding-top: 0;
 }
-.App-content {
+.App-content,
+.book-content {
 	width: 80%;
 	margin: auto;
 }
