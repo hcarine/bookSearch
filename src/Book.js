@@ -31,7 +31,7 @@ class Book extends Component {
 		else
 			content = <p>Caregando ... </p>;
 		return (
-			<div className="App-content">
+			<div>
 				<Link to="/" className="return">Voltar</Link>
 				{content}
 			</div>
@@ -47,7 +47,7 @@ class BookContent extends Component {
 		return(
 			<Grid className="demo-grid-1 book-content">
 				<Cell col={4}>
-					<img className="icon-book" src={bookImg}></img>
+					<img alt="book cover" className="icon-book" src={bookImg}></img>
 				</Cell>
 				<Cell col={8}>
 					<h2><small>Título: </small>{this.props.book.volumeInfo.title}</h2>
