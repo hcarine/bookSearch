@@ -22,7 +22,6 @@ class Content extends Component {
 				this.setState({ posts });
 			}
 		  });
-		
 	}
 
 	
@@ -44,7 +43,7 @@ class Content extends Component {
 									{post.volumeInfo.title}
 								</CardText>
 								<CardActions border>
-									<Link to="/book">Ver mais</Link>
+									<Link to={"/book/"+post.id}>+ detalhes</Link>
 								</CardActions>
 							</Card>
 						</Cell>
