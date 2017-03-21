@@ -16,6 +16,6 @@ class App extends Component {
 export default App;
 
 export const Header = (props) =>
-	<div className="App-header">
+	<header className="App-header">
 	  <h1>{props.title}</h1>
-	</div>;
+	</header>;

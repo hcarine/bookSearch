@@ -23,6 +23,10 @@ body {
     font-weight: 500;
     padding-top: 0;
 }
+.App-content {
+	width: 80%;
+	margin: auto;
+}
 .App-content input {
 	min-width: 50%;
     height: 40px;
@@ -46,4 +50,15 @@ li .title{
 }
 li .subtitle{
 	font-weight: 400;
+}
+.return{
+	display: flex;
+	align-self: flex-start;
+}
+.icon-book 	{
+    height: 100%;
+    max-width: 100%;
+}
+.book-content .mdl-cell--8-col{
+	text-align: left;
 }
